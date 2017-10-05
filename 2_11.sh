@@ -4,14 +4,18 @@ for i in {1..10}
 do
 echo `expr $i \* $i`
 done
+
 echo
+
 i=1
 while ((i < 11))
 do
 echo $((i**i))
 i=$((i+1))
 done
+
 echo
+
 a=1; b=1; c=0
 echo 1
 echo 1
