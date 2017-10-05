@@ -1,7 +1,7 @@
 #!/bin/bash
 
-read salary
-
+salary=$1
+salary=$((salary * 12))
 if [ $salary -lt 300000 ]; then
 echo NO TAX PAYMENT REQUIRED
 else
