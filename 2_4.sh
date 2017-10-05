@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read file_name
+file_name=$1
 count=1
 while read line
 do
