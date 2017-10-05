@@ -1,8 +1,7 @@
 #!/bin/bash
 
-echo enter the name and birthdate in yyyy-mm-dd format
-read name
-read birthdate
+name=$1
+birthdate=$2
 
 yr=`echo $birthdate | cut -d'-' -f -1`
 date=`date +%F | cut -d'-' -f -1`
