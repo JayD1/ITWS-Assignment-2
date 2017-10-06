@@ -1,7 +1,9 @@
 #!/bin/bash
 
-count=$#
-if [ -f $ ]; then
-echo `ls -l $$i`
+for i in $@
+do
+if [ -f $i ]; then 
+echo `ls -l $i`
 fi
+done
 
