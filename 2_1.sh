@@ -8,15 +8,19 @@ else
 low=$b; high=$a
 fi
 
-df -h | grep "/dev/disk" | tr -s " " | cut -d" " -f 1,5-5 | while read i; 
+df -h | grep "/dev/sda" | tr -s " " | cut -d" " -f 1,5-5 | while read i; 
 do
 cap=`echo $i | cut -d" " -f 2 | cut -d"%" -f 1`
 disc=`echo $i | cut -d" " -f 1`
+
 if [ $cap -lt $low ]; then
 echo OK\, $disc\, $cap\%
-elif [ $i -gt $high ]; then
+
+elif [ $cap -gt $high ]
+then
 echo CRITICAL\, $disc\, $cap\%
-else 
+
+else
 echo WARNING\, $disc\, $cap\%
 fi
 done
