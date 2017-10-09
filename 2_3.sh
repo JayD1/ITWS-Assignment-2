@@ -1,6 +1,6 @@
 #!/bin/bash
 
-string=$1
+string="$1"
 arr=(`grep -c "$string" *.txt | cut -d":" -f 2`)
 for i in ${arr[@]}
 do
